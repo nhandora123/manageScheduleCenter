@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+/* header form input[type="button"]{
+    width: 100
+} */
+header {
+    padding: 10px;
+}
+
+header #getDate {
+    background-color: salmon;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+header input[type="button"] {
+    background-color: sandybrown;
+    border-radius: 10px;
+    padding: 1px;
+    font-weight: 700;
+}
+
+header .profile{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 1s;
+
+    float: right;
+    color: antiquewhite;
+    background-color:rgb(52, 143, 235);
+    padding-right: 25%;
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    z-index: 2;
+
+    box-shadow: -5px -5px 10px 2px rgba(255, 255, 255, 0.3),
+    5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+
+}
+header .profile::before{
+    content: '';
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color:rgb(52, 143, 235);
+
+    
+    position: absolute;
+    left: -19.5px;
+    top: 0px;
+    z-index: -1;
+}
+
+header .profile::after{
+    content: '';
+    width: 39px;
+    height: 39px;
+    background-color: rgb(52, 143, 235);
+
+    position: absolute;
+    right: -10px;
+    top: 0px;
+    z-index: -1;
+
+}
+
+header .profile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+header .profile .permission{
+    line-height: 100%;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+header .profile #profileEmailTeacher{
+    margin-left: 5px;
+}
+
+#add {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+    background-image: url('https://image.flaticon.com/icons/svg/864/864378.svg');
+    background-size: contain;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* delete */
+
+#deleteClass .input input {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+#deleteClass .fa {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+        5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+#deleteClass .fa:hover {
+    box-shadow: inset -1px -1px 5px rgba(255, 255, 255, 0.5),
+        inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+#deleteClass .input input:checked~.fa {
+
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+    color: springgreen;
+    text-shadow: 0 0 5px,
+        0 0 20px;
+}
+
+#deleteClass .input input:checked~span {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.buttonCommit {
+    background-color: green;
+    border-color: green;
+}
+
+.buttonCommit:hover {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
+
+/* ---------------------------------- */
+
+#dateOfWeek {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    z-index: 3;
+}
+
+#dateOfWeek .title {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 2px;
+    height: 60px;
+    width: -webkit-fill-available;
+    background-color: #f99a9c;
+    text-align: center;
+    border: 3px solid floralwhite;
+    border-radius: 10px;
+    padding: 0.5px !important;
+    color: black;
+    font-weight: bold;
+
+}
+
+/*  {
+    padding: 0.5px !important;
+} */
+
+#dateOfWeek .content {
+    width: auto;
+}
+
+#dateOfWeek .content .infor {
+    position: relative;
+    border-radius: 10px;
+    background-color: attr("color");
+    margin: 10px 5px;
+    padding: 5px 5px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    box-shadow: -5px -5px 10px 2px rgba(255, 255, 255, 0.3),
+        5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+ .content .infor img {
+    position: relative;
+    width: 30px;
+}
+
+ .content .infor span {
+    display: flex;
+    justify-content: space-between;
+}
+
+ .content .infor .justify {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+
+}
+
+ .content .infor .checking {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+
+}
+
+ .content .infor:hover .checking input,
+ .content .infor:hover .justify input {
+    opacity: 1;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 900;
+
+}
+
+ .content .infor .checking input,
+ .content .infor .justify input {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    margin: 8px;
+    background-color: #3dff8e;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+ .content .infor .checking input:hover,
+ .content .infor .justify input:hover {
+    background-color: brown;
+    color: white;
+}
+
+#salary {
+    position: fixed;
+    display: flex;
+    bottom: 5%;
+    right: 15%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#salary .salary {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+#salary .salary h5 {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    color: white
+}
+
+#salary .fa {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#salary #line {
+    position: absolute;
+    width: 350px;
+    height: 3px;
+    background: white;
+    bottom: -10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#salary #line #nowLine {
+    height: 5px;
+    background: red;
+    border-radius: 10px;
+    transition: 1s;
+    width: 0;
+}
+
+#salary #line #persent {
+    position: absolute;
+    left: -63px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px rgba(199, 22, 42, 0.5);
+}
+
+#salary #line #persent span {
+    font-size: 20px;
+}
+
+#salary .taxSalary{
+    position: absolute;
+    display: flex;
+    top: -92px;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(148, 27, 83, 0.5);
+    color: wheat;
+    opacity: 0;
+}
+#salary:hover .taxSalary{
+    opacity: 1;
+}
+#moreDetailSalary0 {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    padding: 10px 40px;
+    overflow-y: auto;
+}
+
+#moreDetailSalary0>h1 {
+    color: darkblue;
+    letter-spacing: 2px;
+    font-family: 'Gotu', sans-serif;
+    font-weight: 700;
+}
+
+#moreDetailSalary0 #toggle {
+    position: absolute;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+}
+
+#moreDetailSalary0 #toggle::before {
+    content: '';
+    position: absolute;
+    background-color: #272dcf;
+    width: 40px;
+    height: 10px;
+    top: 5px;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(84, 84, 247, 0.932),
+    5px 5px 10px rgba(84, 84, 247, 0.932),
+    inset -5px -5px 10px rgba(84, 84, 247, 0.932),
+    inset 5px 5px 10px rgba(84, 84, 247, 0.932);
+}
+
+#moreDetailSalary0 #toggle::after {
+    content: '';
+    position: absolute;
+    background-color: #272dcf;
+    width: 40px;
+    height: 10px;
+    bottom: 5px;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(84, 84, 247, 0.932),
+    5px 5px 10px rgba(84, 84, 247, 0.932),
+    inset -5px -5px 10px rgba(84, 84, 247, 0.932),
+    inset 5px 5px 10px rgba(84, 84, 247, 0.932);
+
+}
+
+#moreDetailSalary0.moreDetailSalary #toggle::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+#moreDetailSalary0.moreDetailSalary #toggle::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+
+}
+
+#moreDetailSalary0 .containerDistrict {
+    position: relative;
+    display: grid;
+    width: 100%;
+    margin: 0px;
+    grid-template-columns: repeat(auto-fill, minmax(900px, auto));
+    grid-template-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    gap: 10px;
+}
+
+#moreDetailSalary0 .containerDistrict .district {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#moreDetailSalary0 .containerDistrict .district h1 {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moreDetailSalary0 .containerDistrict .district h2 {
+    font-size: 20px;
+    grid-column: span 1;
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moreDetailSalary0 .containerDistrict>.district h2 {
+    font-size: 30px;
+}
+
+#moreDetailSalary0 .containerDistrict .district .content {
+    grid-column: span 3;
+    grid-row: span 1;
+    padding-left: 30px;
+}
+
+#moreDetailSalary0 .containerDistrict .district .content .detailClass {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, auto));
+}
+
+#moreDetailSalary0 .containerDistrict>.district .content .detailClass {
+    grid-template-rows: minmax(92px, auto);
+}
+
+#moreDetailSalary0 .containerDistrict .district .content .nameClass {
+    grid-column: span 5;
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moreDetailSalary0 .containerDistrict>.district .content .nameClass {
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#moreDetailSalary0 .containerDistrict .district .content .numberStudent {
+    grid-column: span 2;
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moreDetailSalary0 .containerDistrict>.district .content .numberStudent {
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#moreDetailSalary0 .containerDistrict .district .content .numberDateTeach {
+    grid-column: span 2;
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moreDetailSalary0 .containerDistrict>.district .content .numberDateTeach {
+
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#moreDetailSalary0 .containerDistrict .district .content .salaryClass {
+    grid-column: span 3;
+    grid-row: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moreDetailSalary0 .containerDistrict>.district .content .salaryClass {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#moreDetailSalary0.moreDetailSalary {
+    position: fixed;
+    top: 6%;
+    left: 5%;
+    width: 80%;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000 !important;
+}
+
+#moreDetailSalary0.moreDetailSalary~ #dateOfWeek{
+    filter: blur(10px);
+    transition: 0.5s;
+}
+
+.box{
+    height: auto;
+}
+@media (max-width: 500px) {
+
+    header .profile{
+
+        padding-right: 0%;
+        padding-left: 0;
+    }
+    .profile.active {
+        width: 100% !important;
+        left: 0;
+        top: 0 !important;
+        right: 0;
+        border-radius: 0 !important;
+    }
+    #dateOfWeek {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start ;
+        width: 100%;
+        height: 75vh;
+        overflow-y: auto;
+        z-index: 3;
+    }
+
+
+    #moreDetailSalary0{
+        padding: 0;
+    }
+    #moreDetailSalary0.moreDetailSalary {
+        top: 53px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 173px);
+    }
+    #moreDetailSalary0 .containerDistrict {
+        grid-template-columns: repeat(auto-fill, minmax(288px, auto));
+        /* grid-template-rows: minmax(217px, auto); */
+        gap: 0px;
+    }
+    #moreDetailSalary0 .containerDistrict>.district{
+        position: sticky;
+        top: 0;
+        z-index: 99999;
+        background-color: rgba(23, 32, 43, 1);
+        color: white;
+    }
+    #moreDetailSalary0 .containerDistrict .district {
+        display: flex;
+        justify-content: space-around;
+    }
+    #moreDetailSalary0 .containerDistrict .district h1 {
+        font-size: 25px;
+    }
+    #moreDetailSalary0 .containerDistrict .district .content {
+        padding-left: 0;
+    }
+    #moreDetailSalary0 .containerDistrict>.district .content .nameClass {
+        font-size: medium;
+    }
+    #moreDetailSalary0 .containerDistrict>.district .content .numberStudent {
+        font-size: medium;
+    }
+    #moreDetailSalary0 .containerDistrict>.district .content .numberDateTeach {
+        font-size: medium;
+    }
+    #moreDetailSalary0 .containerDistrict>.district .content .salaryClass {
+        font-size: medium;
+    }
+    #moreDetailSalary0 .containerDistrict>.district .content .detailClass {
+        grid-template-rows: none;
+    }
+    #moreDetailSalary0 .containerDistrict .district .content .detailClass {
+        position: relative;
+        display: block;
+        font-size: medium !important;
+    }
+    #moreDetailSalary0 .containerDistrict>.district h2 {
+        font-size: 25px;
+    }
+    #salary {
+        bottom: -1%;
+        right: 15%;
+        left: 0;
+        padding-top: 3%;
+        width: 100%;
+        height: 120px;
+        background-color: rgba(84, 84, 247, 0.932);
+        align-items: center;
+        align-items: flex-start;
+        z-index: 10000;
+    }
+    #salary .salary {
+        margin-right: 10px;
+    }
+    #salary #line {
+        width: 250px;
+        left: 20%;
+        bottom: 25%;
+    }
+    #add{
+        z-index: 1000000;
+        bottom: 1%;
+    }
+    .box{
+        height: auto;
+    }
+}

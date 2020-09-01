@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?url=$1 [L,QSA]
+
+<files config.base.ini>
+  order deny,allow
+  deny from all
+</files>
+<files errorlogs.log>
+  order deny,allow
+  deny from all
+</files>

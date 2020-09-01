@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+.banner{
+    transition: 0.5s;
+    background-image: url(../../image/home/3433515.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: 11;
+    min-height: 100vh;
+}
+
+#toggle{
+    position: relative;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    float: left;
+    margin: 0 10px;
+}
+#toggle::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    height: 10px;
+    top: 5px;
+    border-radius: 10px;
+}
+#toggle::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    height: 10px;
+    bottom: 5px;
+    border-radius: 10px;
+}
+.banner.active #toggle::before{
+    transform: translate(-50%, -50%) rotate(45deg);
+    top:50%;
+    left:50%;
+
+}
+.banner.active #toggle::after{
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top:50%;
+    left:50%;
+
+}
+.banner.active{
+    transform: translateX(500px);
+}
+
+.navigation{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 500px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.navigation.active{
+    z-index: 10;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    text-align: center;
+    list-style-type: none;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 2em;
+    padding: 10px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.navigation ul:hover li a{
+    color: #0002;
+}
+.navigation ul li:hover a{
+    color: #000;
+    background-color: #fff;
+}
+.navigation ul li a:before{
+    content: '';
+    position: absolute;
+    top: 50%;   
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    color: rgba(0,0, 0,.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 400px;
+    transition: letter-spacing 0.5s, border-radius 0.1s, left 0.5s;
+    transition: 0.5s;
+}
+.navigation ul li a:hover:before{
+    content: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+.navigation ul li:nth-child(6n+1) a:before{
+    background-color: #81ecec;
+}
+.navigation ul li:nth-child(6n+2) a:before{
+    background-color: #ff7675;
+}
+.navigation ul li:nth-child(6n+3) a:before{
+    background-color: #55efc4;
+}.navigation ul li:nth-child(6n+4) a:before{
+    background-color: #a29bfe;
+}.navigation ul li:nth-child(6n+5) a:before{
+    background-color: #fd79a8;
+}.navigation ul li:nth-child(6n+6) a:before{
+    background-color: #ffeaa7;
+}
+@media (max-width:730px){
+
+    .banner.active{
+        transform: translateX(300px);
+    }
+    .navigation{
+        max-width: 300px;
+    }
+    .navigation ul li a:before{
+        font-size: 50px;
+
+    }
+    .navigation ul li a:hover:before{
+        letter-spacing: 7px;
+    }
+}

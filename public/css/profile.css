@@ -1,0 +1,144 @@
+.profile .permissionDetail
+{
+    display: none;
+}
+.profile.active
+{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 0px;
+    height: 80vh;
+    z-index: 100;
+    border-radius: 10%;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../../public/image/home/bgprofile.jpg");
+    background-size: cover;
+}
+
+.profile.active::before
+{
+    content: none;
+}
+
+.profile.active::after
+{
+    content: none;
+}
+
+.profile.active img
+{
+    width: 150px;
+    height: 150px;
+    margin-top: 0px;
+}
+.profile.active .permissionDetail
+{
+    display: inline-block;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+.profile.active .permission
+{
+    display: none;
+    
+}
+
+.profile.active #profileEmailTeacher
+{
+    font-size: 20px;
+    margin-top: 20px;
+    display: none;
+    margin-left: 20px;
+}
+
+.profile .mail
+{
+    display: none;
+}
+.profile.active .mail
+{
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.profile .phoneNumber
+{
+    display: none;
+}
+
+.profile.active .phoneNumber
+{
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.profile .fullName
+{
+    display: none;
+}
+
+.profile.active .fullName
+{
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.profile.active #infoDetail
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+}
+
+.profile #infoDetail
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile.active .image
+{
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.profile .image{
+    display: none;
+}
+
+.button {
+    background-color: darksalmon;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+ 
+  .profile.active #bgprofile
+  {
+      display: flex;
+  }
+
+  .profile #bgprofile
+  {
+      display: none;
+  } 
