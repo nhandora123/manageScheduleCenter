@@ -1,7 +1,4 @@
-# Demo
+# Website to manage teaching schedule of teachers in technology center
+>Used basic knowledge PHP and used MVC model to create it.
 
-1. API
-2. Block
-3. Model process data with database 
-4. Using bcrypt to hash password 
-5. Ajax - 1h56m22s
+![decription](https://github.com/nhandora123/manageScheduleCenter/blob/master/public/image/description.png)
